@@ -37,7 +37,7 @@ footer {
   display: flex !important; }
 
 #modal--keepcontact-form .row {
-  padding: 30px; }
+  padding: 10px; }
 
 .blue--theme ul li {
   color: black !important; }
@@ -59,3 +59,74 @@ footer {
 
 .modal-dialog {
   padding: 20px !important; }
+
+.newsletter__signup_field {
+  margin-top: 0 !important; }
+
+footer ul {
+  width: 100% !important; }
+
+.jumbo a {
+  margin-top: 40px !important;
+  width: 60% !important;
+  padding: 5px 10px !important;
+  margin: auto;
+  max-width: 425px; }
+
+.button--community:focus {
+  color: white !important;
+  background-color: #034B75 !important;
+  border-radius: 100px;
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+  margin: 20px auto; }
+
+#jumbo-text-holder p {
+  min-width: 600px; }
+
+/*MOBILE ONLY*/
+@media screen and (max-width: 675px) {
+  #jumbo-text-holder p {
+    min-width: 100%; }
+  .community-access-btn {
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%); }
+  .jumbo #jumbo-text-holder {
+    width: 100% !important; } }
+
+.span--changer {
+  min-height: 220px; }
+
+.form--community, .form--brand {
+  max-width: 900px !important; }
+
+.modal--form input[name="MESSAGE"] {
+  height: 120px !important; }
+
+.modal--form .row {
+  min-width: 320px !important; }
+
+footer ul:first-of-type img {
+  max-width: 230px !important; }
+
+.legal-mentions a {
+  font-size: 18px;
+  color: #034B75;
+  text-decoration: underline;
+  display: block;
+  margin: auto;
+  text-align: center; }
+
+.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+  margin-left: 0 !important; }
+
+footer ul:last-of-type li:last-of-type {
+  width: 100% !important; }
+
+.jumbo article {
+  margin: auto !important;
+  width: 65% !important; }
+  .jumbo article .span--changer {
+    text-align: center; }

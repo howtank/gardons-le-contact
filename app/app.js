@@ -68,6 +68,12 @@ const colors = ['#ff5ea0', '#1bce6e', '#034b75'];
         e.preventDefault();
         var $modal = $('#modal--keepcontact-form');
         $modal.modal('show');
+	});
+	
+	$('body').on('click', 'a[href$="#CGU"]', function(e) {
+        e.preventDefault();
+        var $modal = $('#modal--CGU');
+        $modal.modal('show');
     });
     spanSwitch();
 
@@ -88,6 +94,10 @@ const colors = ['#ff5ea0', '#1bce6e', '#034b75'];
       })
       mobileMenuBtnClose.addEventListener("click",()=>{
         toggleSidebar();
-        })  
+		})
+	if (document.location.hash === "#CGU"){
+		var $modal = $('#modal--CGU');
+		$modal.modal('show');
+	}
 
 });
