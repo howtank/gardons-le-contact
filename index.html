@@ -100,24 +100,15 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content modal-content--editable">
                 <h2 style="text-align:center;margin-top:20px">Contactez-nous</h2>
-                <form action="https://howtank.us4.list-manage.com/subscribe/post?u=7e676eb43f81b9f3c2e36fb28&amp;id=7373637976" method="post" class="form--community clearfix" id="form--community"  name="mc-embedded-subscribe-form" class="validate" target="_blank">
-                        <div class="row">
-                            <div class="form-group col-md-12">
-                                <label c for="mce-EMAIL">Adresse Email<span class="asterisk">*</span>
-                                </label>
-                                <input type="email" value="" name="EMAIL" class="form-control" id="mce-EMAIL">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-md-12">
-                                <label for="mce-MMERGE5">Message<span class="asterisk">*</span>
-                                </label>
-                                <textarea type="text" value="" name="MESSAGE" class="required form-control"  id="mce-MMERGE5"></textarea>
-                            </div>
-                        </div>
-                        <input type="text" name="MERGE6" id="MERGE6" size="25" value="Gardons le contact">
-                        <div class="clear"><input type="submit" style="margin-bottom:20px" value="Envoyer un message" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary"></div>   
-                    </form>
+                <form class="form--community clearfix" id="form--community">
+                    <div class="row"><input id="form-email-field" type="email" class="form-control" size="30" required></div>
+                    <div class="row"><textarea id="form-message-field" class="form-control" size="3000" required></textarea> </div><button class="g-recaptcha" 
+                        data-sitekey="6LcL7uMZAAAAAD1akH1LPjB1D9hNAWru-_t8yu4l" 
+                        data-callback='onSubmit' 
+                        data-action='submit'></button>
+                    <div class="row"><input type="submit" onClick="submitFormToAPI(event)" class="btn btn-primary" value="Envoyer un message" id="form-validation-button">   </div>
+                    
+                </form>
             </div>
         </div>
     </div>
@@ -145,11 +136,19 @@
     crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sidebar/3.3.2/jquery.sidebar.min.js" integrity="sha512-sE4GyQp4GEFV4qtelZtk1VmjxViVV9zC3PnZCKEjmDIiNZ+MpY/53EKGk+eZUx4FvvH7F2QgduRa2Oxe/pK7fQ==" crossorigin="anonymous"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
     <script src="app/app.js"></script>
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer','GTM-5J5WFB');</script>
+
+	 <script>
+        function onSubmit(token) {
+          document.getElementById("demo-form").submit();
+          console.log(response)
+        }
+      </script>
 </body>
 </html>

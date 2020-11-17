@@ -100,4 +100,46 @@ const colors = ['#ff5ea0', '#1bce6e', '#034b75'];
 		$modal.modal('show');
 	}
 
+	function submitFormToAPI(e) {
+		e.preventDefault();
+		var URL = "#";
+			 if ($("#email-input").val()=="") {
+				 alert ("Please enter your email id");
+				 return;
+			 }
+ 
+			 var reeamil = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,6})?$/;
+			 if (!reeamil.test($("#email-input").val())) {
+				 alert ("Please enter valid email address");
+				 return;
+			 }
+ 
+		var email = $("#form-email-field").val();
+		var message = $("#form-message-field").val();
+		var data = {
+		   email : email,
+		   message : desc
+		 };
+ 
+		$.ajax({
+		  type: "POST",
+		  url : "#",
+		  dataType: "json",
+		  crossDomain: "true",
+		  contentType: "application/json; charset=utf-8",
+		  data: JSON.stringify(data),
+ 
+		  
+		  success: function () {
+			alert("Successfull");
+			document.getElementById("contact-form").reset();
+			location.reload();
+		  },
+		  error: function () {
+			alert("UnSuccessfull");
+		  }});
+	  }
+
+
+
 });
