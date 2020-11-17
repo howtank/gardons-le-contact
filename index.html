@@ -101,13 +101,22 @@
             <div class="modal-content modal-content--editable">
                 <h2 style="text-align:center;margin-top:20px">Contactez-nous</h2>
                 <form class="form--community clearfix" id="form--community">
-                    <div class="row"><input id="form-email-field" type="email" class="form-control" size="30" required></div>
-                    <div class="row"><textarea id="form-message-field" class="form-control" size="3000" required></textarea> </div><button class="g-recaptcha" 
+                    <div class="row">
+                        <label for="email">Adresse Email<span class="asterisk">*</span></label>
+                        <input id="form-email-field" type="email" name="email" class="form-control" size="30" required>
+                    </div>
+                    <div class="row">
+                        <label for="message">Message<span class="asterisk">*</span></label>
+                        <textarea id="form-message-field" class="form-control" name="message" size="3000" required></textarea> 
+                    </div>
+                    <button class="g-recaptcha"
                         data-sitekey="6LcL7uMZAAAAAD1akH1LPjB1D9hNAWru-_t8yu4l" 
                         data-callback='onSubmit' 
-                        data-action='submit'></button>
-                    <div class="row"><input type="submit" onClick="submitFormToAPI(event)" class="btn btn-primary" value="Envoyer un message" id="form-validation-button">   </div>
-                    
+                        data-action='submit'>
+                    </button>
+                    <div class="row">
+                        <input type="submit" onClick="submitFormToAPI(event)" class="btn btn-primary" value="Envoyer un message" id="form-validation-button">
+                    </div>
                 </form>
             </div>
         </div>
