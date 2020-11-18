@@ -145,12 +145,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sidebar/3.3.2/jquery.sidebar.min.js" integrity="sha512-sE4GyQp4GEFV4qtelZtk1VmjxViVV9zC3PnZCKEjmDIiNZ+MpY/53EKGk+eZUx4FvvH7F2QgduRa2Oxe/pK7fQ==" crossorigin="anonymous"></script>
     <script src="https://www.google.com/recaptcha/api.js"></script>
     <script src="app/app.js"></script>
-	 <script>
-        function onSubmit(token) {
+      <script>
+          function onSubmit(token) {
           document.getElementById("form--contact").submitFormToAPI();
         }
-      </script>
-      <script>
           function submitFormToAPI(e,response) {
 		e.preventDefault();
 		var URL = "https://65f4u98kzh.execute-api.us-east-1.amazonaws.com/02/contact-us";
