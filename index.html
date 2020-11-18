@@ -159,5 +159,47 @@
           console.log(response)
         }
       </script>
+      <script>
+          function submitFormToAPI(e,response) {
+		e.preventDefault();
+		var URL = "https://enzywru2tb.execute-api.us-east-1.amazonaws.com/02/contact-us";
+			 if ($("#form-email-field").val()=="") {
+				 alert ("Please enter your email id");
+				 return;
+			 }
+ 
+			 var reeamil = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,6})?$/;
+			 if (!reeamil.test($("#form-email-field").val())) {
+				 alert ("Please enter valid email address");
+				 return;
+			 }
+ 
+		var email = $("#form-email-field").val();
+		var message = $("#form-message-field").val();
+		var data = {
+		   email : email,
+           message : message,
+           recaptcha : response,
+		 };
+ 
+		$.ajax({
+		  type: "POST",
+		  url : "https://enzywru2tb.execute-api.us-east-1.amazonaws.com/02/contact-us",
+		  dataType: "json",
+		  crossDomain: "true",
+		  contentType: "application/json; charset=utf-8",
+		  data: JSON.stringify(data),
+            
+		  
+		  success: function () {
+			alert("Successfull");
+			document.getElementById("contact-form").reset();
+			location.reload();
+		  },
+		  error: function () {
+			alert("UnSuccessfull");
+		  }});
+	  }
+      </script>
 </body>
 </html>
