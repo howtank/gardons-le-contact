@@ -118,7 +118,7 @@ const colors = ['#ff5ea0', '#1bce6e', '#034b75'];
 		var message = $("#form-message-field").val();
 		var data = {
 		   email : email,
-		   message : desc
+		   message : message
 		 };
  
 		$.ajax({
