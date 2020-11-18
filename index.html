@@ -100,7 +100,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content modal-content--editable">
                 <h2 style="text-align:center;margin-top:20px">Contactez-nous</h2>
-                <form class="form--community clearfix" id="form--community">
+                <form class="form--community clearfix" id="form--contact">
                     <div class="row">
                         <label for="email">Adresse Email<span class="asterisk">*</span></label>
                         <input id="form-email-field" type="email" name="email" class="form-control" size="30" required>
@@ -155,14 +155,14 @@
 
 	 <script>
         function onSubmit(token) {
-          document.getElementById("demo-form").submit();
+          document.getElementById("form--contact").submit();
           console.log(response)
         }
       </script>
       <script>
           function submitFormToAPI(e,response) {
 		e.preventDefault();
-		var URL = "https://enzywru2tb.execute-api.us-east-1.amazonaws.com/02/contact-us";
+		var URL = "https://65f4u98kzh.execute-api.us-east-1.amazonaws.com/02/contact-us";
 			 if ($("#form-email-field").val()=="") {
 				 alert ("Please enter your email id");
 				 return;
@@ -179,12 +179,11 @@
 		var data = {
 		   email : email,
            message : message,
-           recaptcha : response,
 		 };
  
 		$.ajax({
 		  type: "POST",
-		  url : "https://enzywru2tb.execute-api.us-east-1.amazonaws.com/02/contact-us",
+		  url : "https://65f4u98kzh.execute-api.us-east-1.amazonaws.com/02/contact-us",
 		  dataType: "json",
 		  crossDomain: "true",
 		  contentType: "application/json; charset=utf-8",
@@ -192,12 +191,10 @@
             
 		  
 		  success: function () {
-			alert("Successfull");
-			document.getElementById("contact-form").reset();
-			location.reload();
+			document.getElementById("form--contact").innerHTML = '<p class="success--message">Votre message a été envoyé</p>';
 		  },
 		  error: function () {
-			alert("UnSuccessfull");
+			document.getElementById("form--contact").innerHTML = '<p class="error--message">Une erreur est survenue</p>';
 		  }});
 	  }
       </script>

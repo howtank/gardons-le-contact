@@ -134,3 +134,7 @@ footer ul:last-of-type li:last-of-type {
 .modal-content--editable {
   height: 30vh;
   min-height: 400px; }
+
+  .success--message,.error--message{
+    font-size:28px;
+  }
