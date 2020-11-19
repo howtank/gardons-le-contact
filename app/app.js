@@ -100,4 +100,8 @@ const colors = ['#ff5ea0', '#1bce6e', '#034b75'];
 		$modal.modal('show');
 	}
 
+	
+
+
+
 });

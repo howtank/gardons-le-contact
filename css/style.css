@@ -106,7 +106,7 @@ footer ul {
   height: 120px !important; }
 
 .modal--form .row {
-  min-width: 320px !important; }
+  min-width: 300px !important; }
 
 footer ul:first-of-type img {
   max-width: 230px !important; }
@@ -130,3 +130,11 @@ footer ul:last-of-type li:last-of-type {
   width: 65% !important; }
   .jumbo article .span--changer {
     text-align: center; }
+
+.modal-content--editable {
+  height: 30vh;
+  min-height: 400px; }
+
+  .success--message,.error--message{
+    font-size:28px;
+  }
