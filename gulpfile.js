@@ -2,6 +2,7 @@
  
 var gulp = require('gulp');
 var sass = require('gulp-sass');
+var serve = require('gulp-serve');
  
 sass.compiler = require('node-sass');
  
@@ -12,5 +13,7 @@ gulp.task('sass', function () {
 });
  
 gulp.task('sass:watch', function () {
-  gulp.watch('app/scss/style.scss', ['app/scss']);
+  gulp.watch('app/scss/style.scss', gulp.series('sass'));
 });
+
+gulp.task('serve', serve('.'))
