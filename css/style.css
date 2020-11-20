@@ -134,3 +134,13 @@ footer ul:last-of-type li:last-of-type {
 .modal-content--editable {
   height: 30vh;
   min-height: 400px; }
+
+.qr-guide {
+  margin-top: 80px;
+  padding: 12px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: white;
+  text-align: left; }
