@@ -170,28 +170,27 @@
         }
           function submitFormToAPI(e,response) {
 		e.preventDefault();
-		var URL = "https://65f4u98kzh.execute-api.us-east-1.amazonaws.com/02/contact-us";
-			 if ($("#form-email-field").val()=="") {
-				 alert ("Veuillez renseigner votre email");
-				 return;
-			 }
- 
-			 var reeamil = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,6})?$/;
-			 if (!reeamil.test($("#form-email-field").val())) {
-				 alert ("Veuillez renseigner une adresse email valide");
-				 return;
-			 }
+		if ($("#form-email-field").val()=="") {
+			alert ("Veuillez renseigner votre email");
+			return;
+		}
+
+		var reeamil = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,6})?$/;
+		if (!reeamil.test($("#form-email-field").val())) {
+			alert ("Veuillez renseigner une adresse email valide");
+			return;
+		}
  
 		var email = $("#form-email-field").val();
 		var message = $("#form-message-field").val();
 		var data = {
-		   email : email,
-           desc : message,
-		 };
+			email : email,
+			desc : message,
+		};
  
 		$.ajax({
 		  type: "POST",
-		  url : "https://65f4u98kzh.execute-api.us-east-1.amazonaws.com/02/contact-us",
+		  url : "https://rg3afntztc.execute-api.eu-west-3.amazonaws.com/contact-us",
 		  dataType: "json",
 		  crossDomain: "true",
 		  contentType: "application/json; charset=utf-8",
