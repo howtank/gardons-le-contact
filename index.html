@@ -129,9 +129,9 @@
                         <textarea id="form-message-field" class="form-control" name="message" size="3000" required></textarea> 
                     </div>
                     <div class="row">
-                        <input type="submit" onClick="submitFormToAPI(event)" class="btn btn-primary g-recaptcha" 
+                        <input type="submit" class="btn btn-primary g-recaptcha" 
                         data-sitekey="6LcL7uMZAAAAAD1akH1LPjB1D9hNAWru-_t8yu4l" 
-                        data-callback='onSubmit'
+                        data-callback='submitFormToAPI'
                         data-action='submit' class="btn btn-primary" value="Envoyer un message" id="form-validation-button">
                     </div>
                 </form>
@@ -164,12 +164,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sidebar/3.3.2/jquery.sidebar.min.js" integrity="sha512-sE4GyQp4GEFV4qtelZtk1VmjxViVV9zC3PnZCKEjmDIiNZ+MpY/53EKGk+eZUx4FvvH7F2QgduRa2Oxe/pK7fQ==" crossorigin="anonymous"></script>
     <script src="https://www.google.com/recaptcha/api.js"></script>
     <script src="app/app.js"></script>
-      <script>
-          function onSubmit(token) {
-          document.getElementById("form--contact").submitFormToAPI();
-        }
-          function submitFormToAPI(e,response) {
-		e.preventDefault();
+    <script>
+          function submitFormToAPI(token) {
 		if ($("#form-email-field").val()=="") {
 			alert ("Veuillez renseigner votre email");
 			return;
@@ -184,7 +180,7 @@
 		var email = $("#form-email-field").val();
 		var message = $("#form-message-field").val();
 		var origin = "Gardons le contact";
-		var data = {email, message, origin};
+		var data = {email, message, origin, token};
  
 		$.ajax({
 		  type: "POST",
