@@ -183,7 +183,8 @@
  
 		var email = $("#form-email-field").val();
 		var message = $("#form-message-field").val();
-		var data = {email, message};
+		var origin = "Gardons le contact";
+		var data = {email, message, origin};
  
 		$.ajax({
 		  type: "POST",
