@@ -180,12 +180,43 @@ footer ul:last-of-type li:last-of-type{
 }
 
 .qr-guide {
-    margin-top: 80px;
-    padding: 12px 24px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    color: white;
-    text-align: left;
+    padding: 36px;
+    text-align: center;
+    background-color: #EEE;
+    
+    > p {
+        font-size: 22px;
+    }
+    
+    ol {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        list-style: none;
+        font-family: 'Source Sans Pro', sans-serif !important;
+        
+        img {
+            max-width: 80%;
+            max-height: 150px;
+            margin-bottom: 18px;
+        }
+        
+        @media screen and (max-width: 639px) {
+            li + li {
+                margin-top: 48px;
+            }
+        }
+        
+        @media screen and (min-width: 640px) {
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: center;
+            li {
+                padding: 24px;
+                flex: 0 1 33%;
+            }
+        }
+    }
 }
