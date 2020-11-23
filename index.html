@@ -183,10 +183,7 @@
  
 		var email = $("#form-email-field").val();
 		var message = $("#form-message-field").val();
-		var data = {
-			email : email,
-			desc : message,
-		};
+		var data = {email, message};
  
 		$.ajax({
 		  type: "POST",
