@@ -142,6 +142,10 @@ footer ul {
   text-decoration: underline;
   color: #034b75; }
 
+.qr-guide .community-signup-btn {
+  color: white;
+  text-decoration: none; }
+
 /*MOBILE ONLY*/
 @media screen and (max-width: 675px) {
   main .jumbo #jumbo-text-holder {
