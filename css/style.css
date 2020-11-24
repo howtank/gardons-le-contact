@@ -149,6 +149,10 @@ footer ul {
 .blue--theme {
   min-height: 225px !important; }
 
+.community-access-btn:hover, .community-signup-btn:hover {
+  color: white;
+  text-decoration: underline; }
+
 /*MOBILE ONLY*/
 @media screen and (max-width: 675px) {
   main .jumbo #jumbo-text-holder {
