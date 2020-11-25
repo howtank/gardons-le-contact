@@ -4,6 +4,11 @@ h1, h2, h3, h4, a, p, span {
 .qr-guide p {
   font-size: 18px !important; }
 
+footer ul:first-of-type a .logo--footer {
+  margin-left: 5px;
+  width: 75px !important;
+  margin-top: 0 !important; }
+
 #header .navbar-brand__logo, footer ul:first-of-type img {
   width: 120px !important; }
 
@@ -154,7 +159,14 @@ footer ul {
   text-decoration: underline; }
 
 /*MOBILE ONLY*/
+@media screen and (max-width: 1125px) {
+  footer #logo-and-appstore-list li a img {
+    width: 20% !important; } }
+
 @media screen and (max-width: 675px) {
+  footer #logo-and-appstore-list li a img {
+    width: 30% !important;
+    max-width: 150px !important; }
   main .jumbo #jumbo-text-holder {
     width: 100% !important; }
   .illustration-qr {
