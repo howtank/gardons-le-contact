@@ -252,3 +252,10 @@ footer ul:last-of-type li:last-of-type {
         .qr-guide ol li {
           padding: 24px;
           flex: 0 1 33%; } }
+
+input[name="control"] {
+  display: none; }
+
+.success--message, .error--message {
+  font-size: 32px;
+  text-align: center; }
