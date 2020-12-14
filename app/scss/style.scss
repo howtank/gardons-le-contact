@@ -333,4 +333,9 @@ footer ul:last-of-type li:last-of-type{
 
 input[name="control"] {
 	display:none;
-  }
+}
+
+.success--message,.error--message{
+    font-size:32px;
+    text-align:center;
+}
